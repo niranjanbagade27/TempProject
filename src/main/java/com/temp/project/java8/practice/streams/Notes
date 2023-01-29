@@ -1,0 +1,13 @@
+Predicate, Consumer, Function,
+
+filter accepts Predicate (Predicate has a test method, it returns boolean)
+    empList.stream().filter(e -> e.getSalary()>10000).collect(Collectors.toList());
+findFirst is a terminal operation that returns first element of the list, orElse can be used after findFirst
+    empList.stream().filter(e -> e.getSalary()>10000).findFirst()
+peek is an intermediate operation that can be used to perform specific operation on each element
+    empList.stream().peek(System.out::println)
+skip is an intermediate operation that acts as a short-circuit operation
+    empList.stream().skip(3).collect(Collectors.toList())
+limit is an intermediate operation that returns a list upto n elements
+
+
